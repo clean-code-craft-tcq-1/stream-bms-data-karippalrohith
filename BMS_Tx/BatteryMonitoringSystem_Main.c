@@ -48,7 +48,5 @@ int Battery_Monitoring_System_main()
 	{
 		BMS_Status = Battery_Monitoring_System_Functionality();
 	}
-		
-	}
 	return 0;
 }
