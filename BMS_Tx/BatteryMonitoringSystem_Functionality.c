@@ -23,6 +23,7 @@
 
 BMS_Send_Parameter_s BMS_Send_Parameter[1] = {sendToConsole};
 BMS_Temp_Value_s BMS_Temp_Value[1] = {Battery_Monitoring_System_Get_Input_Parameter_Temperature_Celcuis};
+
 /*=============================================================================
  =======               DEFINES & MACROS FOR GENERAL PURPOSE              =======
  =============================================================================*/
@@ -41,6 +42,7 @@ BMS_Temp_Value_s BMS_Temp_Value[1] = {Battery_Monitoring_System_Get_Input_Parame
 
 void Battery_Monitoring_System_Functionality(void)
 {
+	BMS_Parameters_Print_Status = NOT_PRINTED;
 	BMS_Parameters_s BMS_Parameters_Values = {0,0};
 	
 	//Get the values
@@ -85,4 +87,5 @@ float Battery_Monitoring_System_Get_Input_Parameter_SOC(void)
 void sendToConsole(BMS_Parameters_s BMS_Parameters_t)
 {
 	printf("\nTemperature::%0.2f,SOC::%0.2f\n",BMS_Parameters_t.Temperature,BMS_Parameters_t.SOC); 
+	BMS_Parameters_Print_Status = PRINTED_IN_CONSOLE;
 }
