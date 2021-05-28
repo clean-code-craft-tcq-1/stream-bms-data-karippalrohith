@@ -34,6 +34,11 @@ typedef enum {
 	TEMP_MAX
 }BMS_Temp_Unit;
 
+typedef enum {
+	PRINTED_IN_CONSOLE,
+	NOT_PRINTED
+}BMS_Target;
+
 typedef struct {
 	float Temperature;
 	float SOC;
