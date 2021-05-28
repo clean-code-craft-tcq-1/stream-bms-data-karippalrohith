@@ -3,6 +3,15 @@
 #include "../test/catch.hpp"
 #include "BatteryMonitoringSystem_Main.h"
 
+TEST_CASE("Check if all the values received had been send to console") {
+	
+	int count = 10;
+	BMS_Status_s BMS_Status = {NOT_PRINTED,0};
+	
+	BMS_Status = Battery_Monitoring_System_main(count);
+	REQUIRE(count == BMS_Status.BMS_Parameters_Send_To_Console_Count);
+}
+
 TEST_CASE("Check if temp in celcuis and SOC is being updated") {
 	
 	BMS_Parameters_s BMS_Parameters = {0,0};
@@ -16,13 +25,4 @@ TEST_CASE("Check if value is successfully send to console for printing") {
 	BMS_Status_s BMS_Status = {NOT_PRINTED,0};
 	BMS_Status = Battery_Monitoring_System_Functionality();
 	REQUIRE(BMS_Status.BMS_Parameters_Print_Status == PRINTED_IN_CONSOLE);
-}
-
-TEST_CASE("Check if all the values received had been send to console") {
-	
-	int count = 10;
-	BMS_Status_s BMS_Status = {NOT_PRINTED,0};
-	
-	BMS_Status = Battery_Monitoring_System_main(count);
-	REQUIRE(count == BMS_Status.BMS_Parameters_Send_To_Console_Count);
 }
