@@ -56,7 +56,7 @@ typedef struct{
 	int BMS_Parameters_Print_Status;
 }BMS_Status_s;
 
-void Battery_Monitoring_System_Functionality(void);
+BMS_Status_s Battery_Monitoring_System_Functionality(void);
 
 int Battery_Monitoring_System_main(void);
 BMS_Parameters_s Battery_Monitoring_System_Get_Input_Parameters(void);
