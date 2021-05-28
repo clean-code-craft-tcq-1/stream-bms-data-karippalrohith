@@ -20,9 +20,9 @@ TEST_CASE("Check if value is successfully send to console for printing") {
 
 TEST_CASE("Check if all the values received had been send to console") {
 	
-	int count;
+	int count = 10;
 	BMS_Status_s BMS_Status = {NOT_PRINTED,0};
 	
-	count = Battery_Monitoring_System_main(10);
+	BMS_Status = Battery_Monitoring_System_main(count);
 	REQUIRE(count == BMS_Status.BMS_Parameters_Send_To_Console_Count);
 }
