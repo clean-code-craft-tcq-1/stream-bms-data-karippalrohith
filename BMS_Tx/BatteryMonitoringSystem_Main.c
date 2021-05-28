@@ -40,7 +40,7 @@ int Battery_Monitoring_System_main()
 	BMS_Status_s BMS_Status;
 	for(i=0;i<1000;i++)
 	{
-		BMS_Status_s = Battery_Monitoring_System_Functionality();
+		BMS_Status = Battery_Monitoring_System_Functionality();
 	}
 
 	return 0;
