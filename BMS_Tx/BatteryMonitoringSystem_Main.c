@@ -15,6 +15,7 @@
  =======                            INCLUDES                             =======
  ============================================================================*/
 /*------ standard includes -------*/
+#include <stdio.h>
 
 /*------ module includes --------*/
 #include "BatteryMonitoringSystem_Main.h"
@@ -37,11 +38,24 @@
 int Battery_Monitoring_System_main()
 {
 	int i = 0;
+	int c;
+	
 	BMS_Status_s BMS_Status;
-	for(i=0;i<1000;i++)
-	{
-		BMS_Status = Battery_Monitoring_System_Functionality();
+	
+	while(1)
+	{		
+		for(i=0;i<1000;i++)
+		{
+			BMS_Status = Battery_Monitoring_System_Functionality();
+		}
+		
+		printf( "Enter 0 to continue, press any other key to exit :");
+   		c = getchar( );
+		
+		if(c != 0)
+		{
+			break;
+		}
 	}
-
 	return 0;
 }
