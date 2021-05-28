@@ -4,7 +4,7 @@
  ***     \ingroup     Assessment-TCQ
  ***     \author      Rohith K N
  ***
- ***     \brief       Main file for Battery Monitoring
+ ***     \brief       Main file for Battery Monitoring System
  ***
  ***     \par         File_description
  ***                  This file explores more about functions
