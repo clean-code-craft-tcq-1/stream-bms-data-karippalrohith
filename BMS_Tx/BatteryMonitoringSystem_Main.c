@@ -42,20 +42,10 @@ int Battery_Monitoring_System_main()
 	
 	BMS_Status_s BMS_Status;
 	
-	while(1)
-	{		
-		for(i=0;i<10;i++)
-		{
-			BMS_Status = Battery_Monitoring_System_Functionality();
-		}
-		
-		printf( "Enter 0 to continue, press any other key to exit :");
-   		c = getchar( );
-		
-		if(c != 0)
-		{
-			break;
-		}
-	}
+	for(i=0;i<10;i++)
+	{
+		BMS_Status = Battery_Monitoring_System_Functionality();
+	}		
+
 	return 0;
 }
