@@ -40,7 +40,7 @@ BMS_Status_s BMS_Status = {NOT_PRINTED};
  =======                              METHODS                            =======
  =============================================================================*/
 
-void Battery_Monitoring_System_Functionality(void)
+BMS_Status_s Battery_Monitoring_System_Functionality(void)
 {
 	BMS_Status.BMS_Parameters_Print_Status = NOT_PRINTED;
 	BMS_Parameters_s BMS_Parameters_Values = {0,0};
@@ -52,6 +52,8 @@ void Battery_Monitoring_System_Functionality(void)
 	
 	//Output the values	
 	BMS_Send_Parameter[0].BMS_Target_OP(BMS_Parameters_Values);
+	
+	return BMS_Status;
 }
 
 BMS_Parameters_s Battery_Monitoring_System_Get_Input_Parameters(void)
