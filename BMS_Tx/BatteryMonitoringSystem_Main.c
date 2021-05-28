@@ -44,7 +44,7 @@ int Battery_Monitoring_System_main()
 	
 	while(1)
 	{		
-		for(i=0;i<1000;i++)
+		for(i=0;i<10;i++)
 		{
 			BMS_Status = Battery_Monitoring_System_Functionality();
 		}
