@@ -38,14 +38,17 @@
 int Battery_Monitoring_System_main()
 {
 	int i = 0;
-	int c;
+	int count;
 	
 	BMS_Status_s BMS_Status;
 	
-	for(i=0;i<10;i++)
+	printf("\nEnter number of values to be send:");
+	scanf("%d", &count);
+	for(i=0;i<count;i++)
 	{
 		BMS_Status = Battery_Monitoring_System_Functionality();
-	}		
-
+	}
+		
+	}
 	return 0;
 }
