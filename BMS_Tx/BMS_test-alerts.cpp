@@ -17,3 +17,10 @@ TEST_CASE("Check if value is successfully send to console for printing") {
 	BMS_Status = Battery_Monitoring_System_Functionality();
 	REQUIRE(BMS_Status.BMS_Parameters_Print_Status == PRINTED_IN_CONSOLE);
 }
+
+TEST_CASE("Check how much values have been received") {
+	
+	int count;
+	count = Battery_Monitoring_System_main();
+	REQUIRE(count == 10);
+}
