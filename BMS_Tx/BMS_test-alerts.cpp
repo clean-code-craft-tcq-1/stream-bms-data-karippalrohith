@@ -21,6 +21,6 @@ TEST_CASE("Check if value is successfully send to console for printing") {
 TEST_CASE("Check how much values have been received") {
 	
 	int count;
-	count = Battery_Monitoring_System_main();
+	count = Battery_Monitoring_System_main(10);
 	REQUIRE(count == 10);
 }
