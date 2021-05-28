@@ -15,7 +15,7 @@
  =======                            INCLUDES                             =======
  ============================================================================*/
 /*------ standard includes -------*/
-
+#include <conio.h>
 
 /*------ module includes --------*/
 #include "BatteryMonitoringSystem_Main.h"
@@ -39,7 +39,7 @@ int main()
 {
 	int i = 0;
 	
-	for(i=0;i<15;i++)
+	while (!kbhit())
 	{
 		Battery_Monitoring_System_Functionality();
 	}
