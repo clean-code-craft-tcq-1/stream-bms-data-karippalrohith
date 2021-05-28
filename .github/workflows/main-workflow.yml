@@ -16,7 +16,7 @@ jobs:
         sudo apt-get install -y gcovr
 
     - name: build
-      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker ./BMS_Tx/BatteryMonitoringSystem_Main.c ./BMS_Tx/BatteryMonitoringSystem_Functionality.c ./BMS_Tx/BMS_test-alerts.cpp
+      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker ./BMS_Tx/BMS_test-alerts.cpp ./BMS_Tx/BatteryMonitoringSystem_Main.c ./BMS_Tx/BatteryMonitoringSystem_Functionality.c
       
     - name: run
       run: ./testchecker
