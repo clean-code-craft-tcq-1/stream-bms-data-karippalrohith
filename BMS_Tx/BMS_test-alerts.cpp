@@ -5,7 +5,7 @@
 
 TEST_CASE("Check if value is successfully send to cnsole for printing") {
 	
-	BMS_Status_s Alert_Status_Output = {NOT_PRINTED};
+	//BMS_Status_s Alert_Status_Output = {NOT_PRINTED};
 	
 	//Alert_Status_Output = checkAndAlert(TO_CONTROLLER, batteryCharacter, 20);
 	//REQUIRE(Alert_Status_Output.Alert_Print_Status == PRINTED_IN_CONTROLLER);
