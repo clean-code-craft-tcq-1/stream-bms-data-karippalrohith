@@ -59,7 +59,7 @@ typedef struct{
 
 BMS_Status_s Battery_Monitoring_System_Functionality(void);
 
-int Battery_Monitoring_System_main(int count);
+BMS_Status_s Battery_Monitoring_System_main(int count);
 BMS_Parameters_s Battery_Monitoring_System_Get_Input_Parameters(void);
 
 float Battery_Monitoring_System_Get_Input_Parameter_Temperature_Celcuis(void);
