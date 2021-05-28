@@ -37,7 +37,12 @@
  =============================================================================*/
 int main()
 {
-	Battery_Monitoring_System_Functionality();
+	int i = 0;
+	
+	for(i=0;i<15;i++)
+	{
+		Battery_Monitoring_System_Functionality();
+	}
 
 	return 0;
 }
