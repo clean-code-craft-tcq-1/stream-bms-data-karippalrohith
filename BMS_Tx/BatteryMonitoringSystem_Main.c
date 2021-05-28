@@ -46,7 +46,8 @@ int Battery_Monitoring_System_main()
 	scanf("%d", &count);
 	for(i=0;i<count;i++)
 	{
-		BMS_Status = Battery_Monitoring_System_Functionality();
+		//BMS_Status = Battery_Monitoring_System_Functionality();
+		Battery_Monitoring_System_Functionality();
 	}
 	return 0;
 }
