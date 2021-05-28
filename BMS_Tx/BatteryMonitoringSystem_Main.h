@@ -52,6 +52,10 @@ typedef struct {
 	float (*BMS_Temp_Unit)(void);
 }BMS_Temp_Value_s;
 
+typedef struct{
+	int BMS_Parameters_Print_Status;
+}BMS_Status_s;
+
 void Battery_Monitoring_System_Functionality(void);
 
 int Battery_Monitoring_System_main(void);
