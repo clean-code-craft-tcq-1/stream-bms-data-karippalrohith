@@ -38,11 +38,7 @@
 BMS_Status_s Battery_Monitoring_System_main(int count)
 {
 	int i = 0;
-	int count;
 	BMS_Status_s BMS_Status;
-	
-	printf( "\nEnter a value :\n");
-   	count = getchar();
 	
 	for(i=0;i<count;i++)
 	{
