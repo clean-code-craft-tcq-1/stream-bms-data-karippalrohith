@@ -35,8 +35,7 @@
 /*=============================================================================
  =======                              METHODS                            =======
  =============================================================================*/
-//BMS_Status_s Battery_Monitoring_System_main(int count)
-int main()
+BMS_Status_s Battery_Monitoring_System_main(int count)
 {
 	int i = 0;
 	int count;
@@ -49,6 +48,5 @@ int main()
 	{
 		BMS_Status = Battery_Monitoring_System_Functionality();
 	}
-	//return BMS_Status;
-	return 0;
+	return BMS_Status;
 }
