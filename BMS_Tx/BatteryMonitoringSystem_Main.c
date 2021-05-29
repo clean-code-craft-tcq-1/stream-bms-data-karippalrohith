@@ -35,14 +35,20 @@
 /*=============================================================================
  =======                              METHODS                            =======
  =============================================================================*/
-BMS_Status_s Battery_Monitoring_System_main(int count)
+//BMS_Status_s Battery_Monitoring_System_main(int count)
+int main()
 {
 	int i = 0;
+	int count;
 	BMS_Status_s BMS_Status;
+	
+	printf( "\nEnter a value :\n");
+   	count = getchar();
 	
 	for(i=0;i<count;i++)
 	{
 		BMS_Status = Battery_Monitoring_System_Functionality();
 	}
-	return BMS_Status;
+	//return BMS_Status;
+	return 0;
 }
