@@ -35,11 +35,14 @@
 /*=============================================================================
  =======                              METHODS                            =======
  =============================================================================*/
+
+ifndef -DUNIT_TEST
 int main()
 {
 	Battery_Monitoring_System_main(10);
 	return 0;
 }
+#endif
 
 BMS_Status_s Battery_Monitoring_System_main(int count)
 {
