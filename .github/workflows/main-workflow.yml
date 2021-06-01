@@ -32,7 +32,7 @@ jobs:
         retention-days: 1
         
     - name: build for production
-      run: g++ -Wall -Wextra -o production ./BMS_Tx/BMS_test-alerts.cpp ./BMS_Tx/BatteryMonitoringSystem_Main.c ./BMS_Tx/BatteryMonitoringSystem_Functionality.c
+      run: g++ -Wall -Wextra -o production ./BMS_Tx/BatteryMonitoringSystem_Main.c ./BMS_Tx/BatteryMonitoringSystem_Functionality.c
       
     - name: production code run
       run: ./production
