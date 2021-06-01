@@ -15,6 +15,8 @@
  =======                            INCLUDES                             =======
  ============================================================================*/
 /*------ standard includes -------*/
+#include <conio.h>
+#include <ctype.h>
 #include <stdio.h>
 
 /*------ module includes --------*/
@@ -40,12 +42,21 @@
 int main()
 {
 	int count_of_Entries;
+	   int ch;
+
+   _cputs( "No of entries " );
+
+      ch = _getwch();
+      printf("got %d\n", ch);
+   
+	
 	
 	Battery_Monitoring_System_main(1500);
 	
 	return 0;
 }
 #endif
+
 
 BMS_Status_s Battery_Monitoring_System_main(int count)
 {
