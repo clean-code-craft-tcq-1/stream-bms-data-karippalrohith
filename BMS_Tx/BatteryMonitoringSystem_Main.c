@@ -35,6 +35,12 @@
 /*=============================================================================
  =======                              METHODS                            =======
  =============================================================================*/
+int main()
+{
+	Battery_Monitoring_System_main(10);
+	return 0;
+}
+
 BMS_Status_s Battery_Monitoring_System_main(int count)
 {
 	int i = 0;
