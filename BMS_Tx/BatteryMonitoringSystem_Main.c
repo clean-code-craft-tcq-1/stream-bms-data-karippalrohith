@@ -39,7 +39,14 @@
 #ifndef UNIT_TEST   	
 int main()
 {
-	Battery_Monitoring_System_main(10);
+	int count_of_Entries;
+	
+	// Input the integer
+   	printf("Enter the integer: ");
+    	scanf("%d", &count_of_Entries);
+	
+	Battery_Monitoring_System_main(count_of_Entries);
+	
 	return 0;
 }
 #endif
