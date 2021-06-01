@@ -15,8 +15,6 @@
  =======                            INCLUDES                             =======
  ============================================================================*/
 /*------ standard includes -------*/
-#include <conio.h>
-#include <ctype.h>
 #include <stdio.h>
 
 /*------ module includes --------*/
@@ -41,17 +39,9 @@
 #ifndef UNIT_TEST   	
 int main()
 {
-	int count_of_Entries;
-	   int ch;
+	int count_of_Entries = 1500;
 
-   _cputs( "No of entries " );
-
-      ch = _getwch();
-      printf("got %d\n", ch);
-   
-	
-	
-	Battery_Monitoring_System_main(1500);
+	Battery_Monitoring_System_main(count_of_Entries);
 	
 	return 0;
 }
