@@ -44,7 +44,7 @@ int main()
 	// Input the integer
    	printf("Enter the integer: ");
     	scanf("%d", &count_of_Entries);
-	
+	printf("\nentries=%d\n",count_of_Entries);
 	Battery_Monitoring_System_main(count_of_Entries);
 	
 	return 0;
