@@ -36,7 +36,7 @@
  =======                              METHODS                            =======
  =============================================================================*/
 
-ifndef -DUNIT_TEST
+#ifndef UNIT_TEST   	
 int main()
 {
 	Battery_Monitoring_System_main(10);
