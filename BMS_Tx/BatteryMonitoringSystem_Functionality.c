@@ -88,7 +88,7 @@ float Battery_Monitoring_System_Get_Input_Parameter_SOC(void)
 
 void sendToConsole(BMS_Parameters_s BMS_Parameters_t)
 {
-	printf("\nTemperature::%0.2f,SOC::%0.2f\n",BMS_Parameters_t.Temperature,BMS_Parameters_t.SOC); 
+	printf("\nTemperature:%0.2f,SOC:%0.2f\n",BMS_Parameters_t.Temperature,BMS_Parameters_t.SOC); 
 	BMS_Status.BMS_Parameters_Print_Status = PRINTED_IN_CONSOLE;
 	BMS_Status.BMS_Parameters_Send_To_Console_Count++;
 }
