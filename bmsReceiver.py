@@ -17,7 +17,7 @@ class bmsReceiver():
     def fetch_and_check_sender_data(self):
         bms_data = {}
         for console_data in sys.stdin:
-            print(console_data)
+            print('here', console_data)
             bms_data = self.convert_to_dictionary(console_data)
             self.check_and_alert(bms_data)
     
@@ -45,7 +45,6 @@ class bmsReceiver():
         return 
                 
     def convert_to_dictionary(self, param):
-        print(param)
         bms_param = json.loads(param)
         for key, value in bms_param.items():
             self.create_bms_param(key, value)
