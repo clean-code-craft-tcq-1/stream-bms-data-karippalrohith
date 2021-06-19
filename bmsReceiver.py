@@ -45,6 +45,7 @@ class bmsReceiver():
         return 
                 
     def convert_to_dictionary(self, param):
+        print(param)
         bms_param = json.loads(param)
         for key, value in bms_param.items():
             self.create_bms_param(key, value)
