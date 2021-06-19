@@ -17,6 +17,7 @@ class bmsReceiver():
     def fetch_and_check_sender_data(self):
         bms_data = {}
         for console_data in sys.stdin:
+            print(console_data)
             bms_data = self.convert_to_dictionary(console_data)
             self.check_and_alert(bms_data)
     
