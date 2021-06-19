@@ -17,9 +17,7 @@ jobs:
     - name: build
       run: g++ -DUNIT_TEST -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker ./BMS_Tx/BMS_test-alerts.cpp ./BMS_Tx/BatteryMonitoringSystem_Main.c ./BMS_Tx/BatteryMonitoringSystem_Functionality.c
       
-    - name: run
-      run: ./testchecker
-     - name: Set up Python 3.9
+    - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
