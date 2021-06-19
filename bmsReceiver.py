@@ -18,7 +18,7 @@ class bmsReceiver():
         bms_data = {}
         for console_data in sys.stdin:
             print('length of input string', len(console_data))
-            if len(console_data) != 0:
+            if len(console_data) != 1:
                 bms_data = self.convert_to_dictionary(console_data)
                 self.check_and_alert(bms_data)
     
