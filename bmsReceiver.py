@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jun 16 14:29:47 2021
-
-@author: UGU3KOR
-"""
 import sys
 import json
 from bmsReceiverConstants import MA_WINDOW_SIZE
@@ -20,6 +14,7 @@ class bmsReceiver():
             if len(console_data) != 1:
                 bms_data = self.convert_to_dictionary(console_data)
                 self.check_and_alert(bms_data)
+        return self.bms_param
     
     def check_and_alert(self, bms_data):
         for key, value in bms_data.items():
@@ -32,11 +27,15 @@ class bmsReceiver():
         return 
             
     def invoke_alert_to_console(self, key, value):
+        status = None
         if value < bms_param_thresholds[key]['min']:
             print('ALERT! {} is too Low'.format(key))
+            status = 'TOO_LOW'
         elif value > bms_param_thresholds[key]['max']:
             print('ALERT! {} is too high'.format(key))
-                    
+            status = 'TOO_HIGH'
+        return status
+    
     def create_bms_param(self, key, value):
         if key not in self.bms_param:
             self.bms_param[key] = [value]
@@ -65,25 +64,25 @@ class bmsReceiver():
         min_value = min(data)
         return max_value, min_value
     
-    def print_moving_average_to_console(self, moving_averages_dic):
-        for key in self.bms_param.keys():
+    def print_moving_average_to_console(self, bms_data, moving_averages_dic):
+        for key in bms_data.keys():
             print('Calculated Moving Average for last 5 values of {} is: {}'.format(key, moving_averages_dic[key]))
     
-    def print_min_max_values_to_console(self):
-        for param, value in self.bms_param.items():
+    def print_min_max_values_to_console(self, bms_data):
+        for param, value in bms_data.items():
             max_value, min_value = self.min_max_calculator(value)
             print('{} : '.format(param))
             print('Minimum Value: {}'.format(min_value))
             print('Maximum Value: {}'.format(max_value))
     
-    def print_to_console(self):
-        if self.bms_param is not None:
-            moving_averages = self.calculate_moving_average(self.bms_param)
-            self.print_moving_average_to_console(moving_averages)
-            self.print_min_max_values_to_console()     
+    def print_to_console(self, bms_data):
+        if bms_data is not None:
+            moving_averages = self.calculate_moving_average(bms_data)
+            self.print_moving_average_to_console(bms_data, moving_averages)
+            self.print_min_max_values_to_console(bms_data)     
             
 if __name__ == '__main__':
        
     bmsReceiver = bmsReceiver()
-    bmsReceiver.fetch_and_check_sender_data()
-    bmsReceiver.print_to_console()
+    bms_data = bmsReceiver.fetch_and_check_sender_data()
+    bmsReceiver.print_to_console(bms_data)
