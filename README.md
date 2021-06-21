@@ -72,3 +72,17 @@ This section lists the minimum functionality of the Sender and Receiver.
 ## Quality Parameters
 
 Setup the quality parameters of your project (duplication, complexity, coverage, warnings) using the GitHub workflow yml files.
+
+## BMS Receiver End Implementation Overview
+
+- The whole Process is being pipelined for Sender and Receiver communication, the main workflow for such scenario is implemented in [Pipeline workflow](https://github.com/clean-code-craft-tcq-1/stream-bms-data-karippalrohith/blob/master/.github/workflows/main-workflow-pipe.yml) of the project
+
+- The Receiver is reading continuos json formatted sender streaming Data
+  ![image](https://user-images.githubusercontent.com/15873999/122753321-bacc6800-d2af-11eb-8c0b-4be6f1e3afe2.png)
+
+- The Receiver fullfills the requirement for the calculation of Simple Moving Average for last 5 values and min-max value in the streamed sender data. 
+
+- The Receiver also checks and alert boundary values for the sender streaming data and prints relevant alert to console output 
+  ![image](https://user-images.githubusercontent.com/15873999/122753477-f404d800-d2af-11eb-9e38-1e730080a1e4.png)
+
+Note: The whole process of sender-receiver can be imagined as sensor and its corresponding controller actions in real-life usecase, where sensor here is sender sending continuous data streaming and controller being the receiver, checking and connecting relevant info to operational teams.
